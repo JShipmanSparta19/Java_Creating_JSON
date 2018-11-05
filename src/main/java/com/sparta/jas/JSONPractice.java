@@ -1,11 +1,15 @@
 package com.sparta.jas;
 
-import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 
 public class JSONPractice {
     public static void main(String[] args){
-        UserDetails dave = new UserDetails("Dave", 20, "dave@email.com");
+        JSONArray hobbies = new JSONArray();
+        hobbies.add("Rugby");
+        hobbies.add("Karate");
 
-        dave.getUserDetails();
+        UserDetails dave = new UserDetails("Dave", 20, "dave@email.com", hobbies);
+
+        dave.printUserDetails();
     }
 }
